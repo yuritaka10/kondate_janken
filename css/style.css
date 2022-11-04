@@ -1,0 +1,142 @@
+body {
+  /* 画像ファイルの指定 */
+  background-image: url(../img/WallPaper_1920x1200.jpeg);
+   
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+   
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+   
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+   
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+   
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #464646;
+}
+
+.message{
+  text-align: center;
+  padding: 80px 0 80px 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.img{
+  width: auto;
+  height: 200px;
+  background-color: white;
+  padding: 100px;
+  border-radius: 40%;
+}
+
+.second{
+  margin: 0 40px;
+}
+
+button{
+  border: none;
+  color: white;
+  text-align: center;
+  background-color: rgb(67, 185, 67);
+  margin: 15px;
+  padding: 15px;
+  border-radius:9999px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button:hover{
+  background-color: darkgreen;
+}
+
+.textcenter{
+    text-align: center;
+}
+
+.henkan{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center
+;}
+
+.reset{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.rstbtn{
+  border: none;
+  color: white;
+  text-align: center;
+  background-color:orange;
+  margin: 15px;
+  padding: 15px;
+  border-radius:9999px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.rstbtn:hover{
+  background-color: orangered;
+}
+
+
+/* モーダル */
+
+#open,
+
+#close {
+  cursor: pointer;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 12px;
+  margin: 16px auto 0;
+  background: #4caf50;
+  color: white;
+}
+
+#mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#modal {
+  background: #fff;
+  color: #555;
+  width: 300px;
+  padding: 40px;
+  border-radius: 4px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+#modal p {
+  margin: 0 0 20px;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  display: none;
+} 

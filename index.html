@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>献立じゃんけん</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="message">今日の献立何にする？<br>キユーピー3本クッキング</h1>
+
+<div class="wrapper">
+
+    <div class="first">
+        <div id="status1" class="textcenter henkan">まずは一回戦！<br>最初はグー、じゃんけん...</div>
+        <div id="result1" class="textcenter henkan"></div>
+
+        <div class="textcenter"><img src="img/0.png" alt="グー" class="img" id="jan1"></div>
+        <div class="textcenter">       
+            <button type="button" onclick="F_Click(0)" id="janbtn1">グー</button>
+            <button type="button" onclick="F_Click(1)" id="janbtn1">チー</button>
+            <button type="button" onclick="F_Click(2)" id="janbtn1">パー</button>
+        </div>
+    </div>
+    
+    <div class="second">  
+        <div id="status2" class="textcenter henkan">二回戦！<br>最初はグー、じゃんけん...</div>
+        <div id="result2" class="textcenter henkan"></div>
+        <div class="textcenter"><img src="img/0.png" alt="グー" class="img" id="jan2"></div> 
+        <div class="textcenter">     
+            <button type="button" onclick="S_Click(0)" id="janbtn2";>グー</button>
+            <button type="button" onclick="S_Click(1)" id="janbtn2";>チー</button>
+            <button type="button" onclick="S_Click(2)" id="janbtn2";>パー</button>
+        </div>
+    </div>
+
+    <div class="therd">   
+        <div id="status3" class="textcenter henkan">三回戦！<br>最初はグー、じゃんけん...</div> 
+        <div id="result3" class="textcenter henkan"></div>
+        <div class="textcenter"><img src="img/0.png" alt="グー" class="img" id="jan3"></div>  
+        <div class="textcenter">      
+            <button type="button" onclick="T_Click(0)" id="janbtn3";>グー</button>
+            <button type="button" onclick="T_Click(1)" id="janbtn3";>チー</button>
+            <button type="button" onclick="T_Click(2)" id="janbtn3";>パー</button>
+        </div>
+    </div>
+</div>
+
+<div class="reset">
+<input type="button" value="リセット" onclick="window.location.reload();" class="rstbtn">
+</div>
+
+<div id="open">献立を表示する</div>
+<section>
+    <div id="mask" class="hidden"></div>
+        <div id="modal" class="hidden">
+            <div class="textcenter henkan">
+                <div id="jenre1"></div>
+                <div id="jenre2"></div>
+                <div id="jenre3"></div>
+            </div> 
+            <div id="close">閉じる</div>
+        </div>
+</section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
