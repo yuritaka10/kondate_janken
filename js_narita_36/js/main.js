@@ -1,12 +1,13 @@
+
+
 function F_Click(playerjanken) {
 
-//cpuのじゃんけんの選択肢
+    //cpuのじゃんけんの選択肢
     const cpujanken = [ "グー" , "チー" , "パー" ];
     //乱数を作る
     const r = Math.floor(Math.random()*3);
     //プレイヤーのじゃんけんの選択肢
     let p_janken =  [ "グー" , "チー" , "パー" ];
-
 
     //if分岐じゃんけん
     if(r === playerjanken) {
@@ -39,12 +40,10 @@ function F_Click(playerjanken) {
     document.querySelector("#jan1").src="img/" + r + ".png";
     document.querySelector("#status1").innerHTML = "相手は" + cpujanken[r] + "を出しました";
     document.querySelector("#result1").innerHTML = kekka1;
-    document.querySelector("#jenre1").innerHTML = janken1;
+    document.querySelector("#jenre1").innerHTML = janken1 + "風の";
 
-    // let final1 = janken1;
-    // return{final1};
+
 };  
-
 
 function S_Click(playerjanken) {
 
@@ -86,11 +85,9 @@ function S_Click(playerjanken) {
         document.querySelector("#jan2").src="img/" + r + ".png";
         document.querySelector("#status2").innerHTML = "相手は" + cpujanken[r] + "を出しました";
         document.querySelector("#result2").innerHTML = kekka2;
-        document.querySelector("#jenre2").innerHTML = janken2;
-
-        // let final2 = janken2;
-        // return{final2};
+        document.querySelector("#jenre2").innerHTML = janken2 + "と";
     };  
+
 
 
 function T_Click(playerjanken) {
@@ -134,41 +131,31 @@ function T_Click(playerjanken) {
     document.querySelector("#status3").innerHTML = "相手は" + cpujanken[r] + "を出しました";
     document.querySelector("#result3").innerHTML = kekka3;
     document.querySelector("#jenre3").innerHTML = janken3;
+    document.querySelector("#jenre3").innerHTML = janken3 + "を使った料理";
 
-    // let final3 = janken3;
-    // return{final3};
 };  
-
-// function Final(){
-
-// }
-//     console.log(F_Click().final1 + S_Click().final2 + T_Click().final3);
-
-//         let final = janken1 + "風の"
-//         final += janken2 + "と"
-//         final += janken3 + "を使った料理"
-//         console.log(final);
-
 
 
 // 以下モーダル
-// 'use strict';
-// {
-//   const open = document.getElementById('open');
-//   const close = document.getElementById('close');
-//   const modal = document.getElementById('modal');
-//   const mask = document.getElementById('mask');
 
-//   open.addEventListener('click', function () {
-//     modal.classList.remove('hidden');
-//     mask.classList.remove('hidden');
-//   });
-//   close.addEventListener('click', function () {
-//     modal.classList.add('hidden');
-//     mask.classList.add('hidden');
-//   });
-//   mask.addEventListener('click', function () {
-//     modal.classList.add('hidden');
-//     mask.classList.add('hidden');
-//   });
-// }
+
+'use strict';
+{
+  const open = document.getElementById('open');
+  const close = document.getElementById('close');
+  const modal = document.getElementById('modal');
+  const mask = document.getElementById('mask');
+
+  open.addEventListener('click', function () {
+    modal.classList.remove('hidden');
+    mask.classList.remove('hidden');
+  });
+  close.addEventListener('click', function () {
+    modal.classList.add('hidden');
+    mask.classList.add('hidden');
+  });
+  mask.addEventListener('click', function () {
+    modal.classList.add('hidden');
+    mask.classList.add('hidden');
+  });
+}
